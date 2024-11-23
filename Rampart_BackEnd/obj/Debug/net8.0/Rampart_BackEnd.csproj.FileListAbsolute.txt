@@ -119,3 +119,4 @@ C:\Users\oscar\RiderProjects\TRABAJO FINAL\ULTIMODEPLOYCONJOSE23112024\Rampart_B
 C:\Users\oscar\RiderProjects\TRABAJO FINAL\ULTIMODEPLOYCONJOSE23112024\Rampart_BackEnd\Rampart_BackEnd\obj\Debug\net8.0\Rampart_BackEnd.pdb
 C:\Users\oscar\RiderProjects\TRABAJO FINAL\ULTIMODEPLOYCONJOSE23112024\Rampart_BackEnd\Rampart_BackEnd\obj\Debug\net8.0\Rampart_BackEnd.genruntimeconfig.cache
 C:\Users\oscar\RiderProjects\TRABAJO FINAL\ULTIMODEPLOYCONJOSE23112024\Rampart_BackEnd\Rampart_BackEnd\obj\Debug\net8.0\ref\Rampart_BackEnd.dll
+C:\Users\oscar\RiderProjects\TRABAJO FINAL\ULTIMODEPLOYCONJOSE23112024\Rampart_BackEnd\Rampart_BackEnd\obj\Debug\net8.0\Rampart_BackEnd.sourcelink.json

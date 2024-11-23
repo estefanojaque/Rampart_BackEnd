@@ -23,19 +23,19 @@ using Rampart_BackEnd.Dishes.Infrastructure.Persistence.EFC.Repositories;
 using Rampart_BackEnd.IAM.Application.Internal.CommandServices;
 using Rampart_BackEnd.IAM.Application.Internal.OutboundServices;
 using Rampart_BackEnd.IAM.Application.Internal.QueryServices;
-using Rampart_BackEnd.IAM.Domain.Repositories;
-using Rampart_BackEnd.IAM.Domain.Services;
 using Rampart_BackEnd.IAM.Infrastructure.Hashing.BCrypt.Services;
 using Rampart_BackEnd.IAM.Infrastructure.Persistence.EFC.Repositories;
 using Rampart_BackEnd.IAM.Infrastructure.Pipeline.Extensions;
 using Rampart_BackEnd.IAM.Infrastructure.Tokens.JWT.Configuration;
 using Rampart_BackEnd.IAM.Infrastructure.Tokens.JWT.Services;
-using Rampart_BackEnd.IAM.Interfaces.ACL;
 using Rampart_BackEnd.IAM.Interfaces.ACL.Services;
 using Rampart_BackEnd.Orders.Infrastructure.Persistence.EFC.Repositories;
 using Rampart_BackEnd.Shared.Infrastructure.Interfaces.ASP.Configuration; 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Rampart_BackEnd.IAM.Domain.Repositories;
+using Rampart_BackEnd.IAM.Domain.Services;
+using Rampart_BackEnd.IAM.Interfaces.ACL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -175,14 +175,10 @@ using (var scope = app.Services.CreateScope())
 
 //***********************(Deploy backend)************************
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
+if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "BackEnd v1");
-        c.RoutePrefix = string.Empty; // Esto hace que Swagger esté disponible en la raíz
-    });
+    app.UseSwaggerUI();
 }
 //***********************(Deploy backend)************************
 
